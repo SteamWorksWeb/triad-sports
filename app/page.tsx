@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 /* ─── Animation variants ─────────────────────────────── */
@@ -63,6 +64,24 @@ export default function HomePage() {
             "radial-gradient(ellipse 120% 90% at 50% -10%, #0a1f44 0%, #061230 35%, #030810 70%, #05090f 100%)",
         }}
       >
+        {/* ── Hero background image layer ── */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 0,
+            overflow: "hidden",
+          }}
+        >
+          <Image
+            src="/images/hero1.jpg"
+            alt="Athletes in action"
+            fill
+            priority
+            className="object-cover opacity-30 mix-blend-overlay"
+          />
+        </div>
+
         {/* Dot-grid texture overlay */}
         <div className="grid-overlay" />
 

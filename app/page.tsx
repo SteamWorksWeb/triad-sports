@@ -782,6 +782,201 @@ export default function HomePage() {
         </motion.div>
       </section>
 
+      {/* ══════════════ PROGRAMS SECTION ══════════════ */}
+      <section
+        id="programs"
+        style={{
+          background: "#ffffff",
+          padding: "6rem 1.5rem",
+        }}
+      >
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+          style={{
+            textAlign: "center",
+            marginBottom: "3.5rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "0.75rem",
+          }}
+        >
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.35rem 0.9rem",
+              background: "rgba(6,176,133,0.08)",
+              border: "1px solid rgba(6,176,133,0.2)",
+              borderRadius: "999px",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 600,
+              fontSize: "0.72rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#06B085",
+            }}
+          >
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#06B085", display: "inline-block" }} />
+            What We Fund
+          </span>
+
+          <h2
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+              letterSpacing: "-0.035em",
+              lineHeight: 1.1,
+              color: "#007DC3",
+              margin: 0,
+            }}
+          >
+            Our Programs
+          </h2>
+
+          <p
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "1rem",
+              lineHeight: 1.7,
+              color: "#64748b",
+              margin: 0,
+              maxWidth: "520px",
+            }}
+          >
+            From capital grants to equipment funding, we provide the resources that
+            high-caliber programs and municipal parks need most.
+          </p>
+        </motion.div>
+
+        {/* Programs grid */}
+        <div
+          style={{
+            maxWidth: "1280px",
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
+            gap: "2rem",
+          }}
+        >
+          {[
+            {
+              src: "/images/gallery2.jpg",
+              alt: "Facility grants program — new sports complex under construction",
+              title: "Facility Grants",
+              desc: "Capital funding for the design and construction of new courts, fields, tracks, and multi-sport complexes in underserved communities.",
+            },
+            {
+              src: "/images/gallery3.jpg",
+              alt: "Equipment funding program — athletes receiving new gear",
+              title: "Equipment Funding",
+              desc: "Direct grants for uniforms, training equipment, and technology upgrades so athletes can compete at their full potential.",
+            },
+            {
+              src: "/images/gallery5.jpg",
+              alt: "Partnership development program — community leaders meeting",
+              title: "Public-Private Partnerships",
+              desc: "We broker and co-fund strategic partnerships between municipal parks departments, school districts, and private sponsors.",
+            },
+          ].map((card, i) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+              style={{
+                background: "#ffffff",
+                borderRadius: "16px",
+                overflow: "hidden",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.04), 0 10px 40px rgba(0,125,195,0.08)",
+                border: "1px solid rgba(226,232,240,0.8)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {/* Card image */}
+              <div style={{ overflow: "hidden", flexShrink: 0 }}>
+                <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.4, ease: "easeOut" as const }}>
+                  <Image
+                    src={card.src}
+                    alt={card.alt}
+                    width={400}
+                    height={250}
+                    className="object-cover"
+                    style={{ width: "100%", height: "192px", display: "block" }}
+                  />
+                </motion.div>
+              </div>
+
+              {/* Card body */}
+              <div
+                style={{
+                  padding: "1.5rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.75rem",
+                  flex: 1,
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 800,
+                    fontSize: "1.1rem",
+                    letterSpacing: "-0.02em",
+                    color: "#007DC3",
+                    margin: 0,
+                  }}
+                >
+                  {card.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontSize: "0.9rem",
+                    lineHeight: 1.7,
+                    color: "#64748b",
+                    margin: 0,
+                    flex: 1,
+                  }}
+                >
+                  {card.desc}
+                </p>
+                <Link
+                  href="/programs"
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.85rem",
+                    color: "#06B085",
+                    textDecoration: "none",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.3rem",
+                    letterSpacing: "0.01em",
+                    marginTop: "0.25rem",
+                  }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#049e77")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#06B085")}
+                >
+                  Learn More
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* ══════════════ GALLERY SECTION ══════════════ */}
       <section
         id="gallery"
@@ -795,7 +990,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           style={{
             textAlign: "center",
             marginBottom: "3.5rem",
@@ -878,7 +1073,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
               whileHover={{ scale: 1.02 }}
               style={{
                 borderRadius: "12px",
@@ -903,6 +1098,131 @@ export default function HomePage() {
               />
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* ══════════════ PARTNERS CAROUSEL ══════════════ */}
+      <section
+        style={{
+          background: "#ffffff",
+          padding: "4rem 0",
+          borderTop: "1px solid #f1f5f9",
+          overflow: "hidden",
+        }}
+      >
+        {/* Section header */}
+        <p
+          style={{
+            fontFamily: "Inter, sans-serif",
+            fontWeight: 600,
+            fontSize: "0.7rem",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            color: "#94a3b8",
+            textAlign: "center",
+            marginBottom: "2.5rem",
+          }}
+        >
+          Trusted by Industry Leaders
+        </p>
+
+        {/* Fade-mask + scrolling track */}
+        <div
+          style={{
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          {/* Left fade */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: "120px",
+              background: "linear-gradient(to right, #ffffff, transparent)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+          {/* Right fade */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              right: 0,
+              top: 0,
+              bottom: 0,
+              width: "120px",
+              background: "linear-gradient(to left, #ffffff, transparent)",
+              zIndex: 2,
+              pointerEvents: "none",
+            }}
+          />
+
+          {/* Scrolling logo track — duplicated for seamless loop */}
+          <div
+            className="marquee-track"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "3.5rem",
+              width: "max-content",
+              paddingLeft: "1.5rem",
+            }}
+          >
+            {[
+              /* Set A */
+              { label: "CityBuild Co.", icon: "🏗️" },
+              { label: "Apex Sports", icon: "⚡" },
+              { label: "FieldTech", icon: "🌿" },
+              { label: "UrbanPlay", icon: "🏙️" },
+              { label: "NexGen Parks", icon: "🌳" },
+              { label: "AthleteFirst", icon: "🏆" },
+              { label: "GridIron Group", icon: "🏈" },
+              { label: "CourtCraft", icon: "🎾" },
+              /* Set B — duplicate for seamless loop */
+              { label: "CityBuild Co.", icon: "🏗️" },
+              { label: "Apex Sports", icon: "⚡" },
+              { label: "FieldTech", icon: "🌿" },
+              { label: "UrbanPlay", icon: "🏙️" },
+              { label: "NexGen Parks", icon: "🌳" },
+              { label: "AthleteFirst", icon: "🏆" },
+              { label: "GridIron Group", icon: "🏈" },
+              { label: "CourtCraft", icon: "🎾" },
+            ].map((logo, i) => (
+              <div
+                key={`${logo.label}-${i}`}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.75rem 1.5rem",
+                  borderRadius: "10px",
+                  border: "1px solid #e2e8f0",
+                  background: "#f8fafc",
+                  flexShrink: 0,
+                  userSelect: "none",
+                }}
+              >
+                <span style={{ fontSize: "1.25rem" }}>{logo.icon}</span>
+                <span
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.85rem",
+                    letterSpacing: "-0.01em",
+                    color: "#475569",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {logo.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

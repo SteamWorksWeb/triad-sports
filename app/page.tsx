@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 /* ─── Animation variants ─────────────────────────────── */
@@ -74,7 +75,7 @@ export default function HomePage() {
           }}
         >
           <Image
-            src="/images/hero1.jpg"
+            src="/images/hero2.jpg"
             alt="Athletes in action"
             fill
             priority
@@ -442,29 +443,470 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* ══════════════ PLACEHOLDER SECTIONS ══════════════ */}
-      {/* These sections exist so the anchor links work during development */}
+      {/* ══════════════ ABOUT SECTION ══════════════ */}
       <section
         id="about"
         style={{
-          minHeight: "100dvh",
-          background: "#05090f",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          background: "#ffffff",
+          padding: "6rem 1.5rem",
         }}
       >
-        <p
+        <div
           style={{
-            fontFamily: "Inter, sans-serif",
-            color: "#1e293b",
-            fontSize: "2rem",
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
+            maxWidth: "1280px",
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 480px), 1fr))",
+            gap: "4rem",
+            alignItems: "center",
           }}
         >
-          About Section — Coming Soon
-        </p>
+          {/* ── Left: Copy ── */}
+          <motion.div
+            initial={{ opacity: 0, x: -32 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
+          >
+            {/* Eyebrow */}
+            <span
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                padding: "0.35rem 0.9rem",
+                background: "rgba(10,31,68,0.07)",
+                border: "1px solid rgba(10,31,68,0.15)",
+                borderRadius: "999px",
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 600,
+                fontSize: "0.72rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "#0a1f44",
+                width: "fit-content",
+              }}
+            >
+              <span
+                style={{
+                  width: "6px",
+                  height: "6px",
+                  borderRadius: "50%",
+                  background: "#0a1f44",
+                  display: "inline-block",
+                }}
+              />
+              Our Foundation
+            </span>
+
+            <h2
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 900,
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.035em",
+                color: "#0a1f44",
+                margin: 0,
+              }}
+            >
+              Who We Are
+            </h2>
+
+            <p
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 500,
+                fontSize: "1.1rem",
+                lineHeight: 1.65,
+                color: "#334155",
+                margin: 0,
+              }}
+            >
+              Triad Sports Foundation is a 501(c)(3) nonprofit dedicated to
+              breaking down barriers so every athlete — regardless of zip code
+              — has access to world-class facilities and programs.
+            </p>
+
+            <p
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontSize: "0.95rem",
+                lineHeight: 1.8,
+                color: "#64748b",
+                margin: 0,
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <p
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontSize: "0.95rem",
+                lineHeight: 1.8,
+                color: "#64748b",
+                margin: 0,
+              }}
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum et dolorum fuga.
+            </p>
+
+            <div style={{ marginTop: "0.5rem" }}>
+              <motion.div
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 400, damping: 18 }}
+                style={{ display: "inline-block" }}
+              >
+                <Link
+                  href="/programs"
+                  id="about-learn-more-btn"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    padding: "0.875rem 2rem",
+                    background: "#0a1f44",
+                    color: "#ffffff",
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.9rem",
+                    letterSpacing: "0.025em",
+                    textDecoration: "none",
+                    borderRadius: "8px",
+                    textTransform: "uppercase",
+                    boxShadow: "0 4px 20px rgba(10,31,68,0.25)",
+                  }}
+                >
+                  Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* ── Right: Image ── */}
+          <motion.div
+            initial={{ opacity: 0, x: 32 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          >
+            <Image
+              src="/images/gallery1.jpg"
+              alt="About us — athletes training"
+              width={600}
+              height={600}
+              className="object-cover rounded-2xl"
+              style={{
+                width: "100%",
+                height: "auto",
+                aspectRatio: "1 / 1",
+                borderRadius: "16px",
+                boxShadow: "0 25px 60px rgba(10,31,68,0.18), 0 8px 24px rgba(0,0,0,0.12)",
+                display: "block",
+              }}
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ══════════════ CTA SECTION ══════════════ */}
+      <section
+        style={{
+          background: "linear-gradient(135deg, #0a1f44 0%, #061230 60%, #0a1f44 100%)",
+          padding: "6rem 1.5rem",
+          textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {/* Subtle glow accents */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "-80px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "700px",
+            height: "400px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(191,10,48,0.14) 0%, transparent 70%)",
+            filter: "blur(40px)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            position: "relative",
+            zIndex: 1,
+            maxWidth: "760px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "1.5rem",
+          }}
+        >
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.35rem 0.9rem",
+              background: "rgba(191,10,48,0.12)",
+              border: "1px solid rgba(191,10,48,0.3)",
+              borderRadius: "999px",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 600,
+              fontSize: "0.72rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#f87171",
+            }}
+          >
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#bf0a30", display: "inline-block", boxShadow: "0 0 6px #bf0a30" }} />
+            Join the Movement
+          </span>
+
+          <h2
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(2rem, 5vw, 3.5rem)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.04em",
+              color: "#f8fafc",
+              margin: 0,
+            }}
+          >
+            Ready to Change the Game?
+          </h2>
+
+          <p
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "clamp(1rem, 2vw, 1.15rem)",
+              lineHeight: 1.75,
+              color: "#94a3b8",
+              margin: 0,
+              maxWidth: "560px",
+            }}
+          >
+            Join us in building the facilities that shape the next generation
+            of athletes.
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+              justifyContent: "center",
+              marginTop: "0.5rem",
+            }}
+          >
+            {/* Primary — Get Involved */}
+            <motion.div
+              whileHover={{ y: -2, scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 18 }}
+            >
+              <Link
+                href="/get-involved"
+                id="cta-get-involved-btn"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.9rem 2.25rem",
+                  background: "#f8fafc",
+                  color: "#0a1f44",
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 700,
+                  fontSize: "0.9rem",
+                  letterSpacing: "0.025em",
+                  textDecoration: "none",
+                  borderRadius: "8px",
+                  textTransform: "uppercase",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.25)",
+                }}
+              >
+                Get Involved
+              </Link>
+            </motion.div>
+
+            {/* Secondary — Donate */}
+            <motion.div
+              whileHover={{ y: -2, scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 18 }}
+            >
+              <Link
+                href="/donate"
+                id="cta-donate-btn"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.9rem 2.25rem",
+                  background: "transparent",
+                  color: "#f8fafc",
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 700,
+                  fontSize: "0.9rem",
+                  letterSpacing: "0.025em",
+                  textDecoration: "none",
+                  borderRadius: "8px",
+                  border: "1.5px solid rgba(248,250,252,0.6)",
+                  textTransform: "uppercase",
+                }}
+              >
+                Donate
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ══════════════ GALLERY SECTION ══════════════ */}
+      <section
+        id="gallery"
+        style={{
+          background: "#f8fafc",
+          padding: "6rem 1.5rem",
+        }}
+      >
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            textAlign: "center",
+            marginBottom: "3.5rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "0.75rem",
+          }}
+        >
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.35rem 0.9rem",
+              background: "rgba(10,31,68,0.07)",
+              border: "1px solid rgba(10,31,68,0.15)",
+              borderRadius: "999px",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 600,
+              fontSize: "0.72rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#0a1f44",
+            }}
+          >
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#0a1f44", display: "inline-block" }} />
+            Our Work
+          </span>
+
+          <h2
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+              letterSpacing: "-0.035em",
+              lineHeight: 1.1,
+              color: "#0a1f44",
+              margin: 0,
+            }}
+          >
+            Project Gallery
+          </h2>
+
+          <p
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "1rem",
+              lineHeight: 1.7,
+              color: "#64748b",
+              margin: 0,
+              maxWidth: "520px",
+            }}
+          >
+            A glimpse into the facilities we&apos;ve built and the communities we&apos;ve
+            transformed across the country.
+          </p>
+        </motion.div>
+
+        {/* Gallery grid */}
+        <div
+          style={{
+            maxWidth: "1280px",
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
+            gap: "1.5rem",
+          }}
+        >
+          {[
+            { src: "/images/gallery1.jpg", alt: "Community basketball court build" },
+            { src: "/images/gallery2.jpg", alt: "Youth soccer field installation" },
+            { src: "/images/gallery3.jpg", alt: "Training facility grand opening" },
+            { src: "/images/gallery4.jpg", alt: "Athletes at Triad-funded facility" },
+            { src: "/images/gallery5.jpg", alt: "Outdoor track renovation" },
+            { src: "/images/gallery6.jpg", alt: "Community sports day event" },
+          ].map((img, i) => (
+            <motion.div
+              key={img.src}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ scale: 1.02 }}
+              style={{
+                borderRadius: "12px",
+                overflow: "hidden",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                cursor: "pointer",
+              }}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={600}
+                height={450}
+                className="object-cover"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  aspectRatio: "4 / 3",
+                  display: "block",
+                  transition: "transform 0.4s ease",
+                }}
+              />
+            </motion.div>
+          ))}
+        </div>
       </section>
     </>
   );

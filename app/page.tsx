@@ -324,7 +324,7 @@ export default function HomePage() {
               style={{
                 fontFamily: "Inter, sans-serif",
                 fontSize: "0.78rem",
-                color: "#475569",
+                color: "#e2e8f0",
                 letterSpacing: "0.03em",
                 marginTop: "-0.5rem",
               }}
@@ -1031,7 +1031,7 @@ export default function HomePage() {
       <section
         id="gallery"
         style={{
-          background: "#f8fafc",
+          background: "#e2e8f0",
           padding: "6rem 1.5rem",
         }}
       >

@@ -823,7 +823,7 @@ export default function HomePage() {
             }}
           >
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#06B085", display: "inline-block" }} />
-            What We Fund
+            What We Do
           </span>
 
           <h2
@@ -975,6 +975,56 @@ export default function HomePage() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA row below grid */}
+        <div
+          style={{
+            marginTop: "4rem",
+            textAlign: "center",
+          }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+            style={{ display: "inline-block" }}
+          >
+            <Link
+              href="/programs"
+              id="programs-section-learn-more-btn"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                padding: "0.9rem 2.25rem",
+                background: "#007DC3",
+                color: "#ffffff",
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 700,
+                fontSize: "0.9rem",
+                letterSpacing: "0.025em",
+                textDecoration: "none",
+                borderRadius: "8px",
+                textTransform: "uppercase",
+                boxShadow: "0 4px 20px rgba(0,125,195,0.25)",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "#005f96";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "#007DC3";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+              }}
+            >
+              Learn More About Our Programs
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
       {/* ══════════════ GALLERY SECTION ══════════════ */}
@@ -1111,20 +1161,36 @@ export default function HomePage() {
         }}
       >
         {/* Section header */}
-        <p
-          style={{
-            fontFamily: "Inter, sans-serif",
-            fontWeight: 600,
-            fontSize: "0.7rem",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: "#94a3b8",
-            textAlign: "center",
-            marginBottom: "2.5rem",
-          }}
-        >
-          Trusted by Industry Leaders
-        </p>
+        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.375rem 1rem",
+              background: "rgba(6,176,133,0.08)",
+              border: "1px solid rgba(6,176,133,0.2)",
+              borderRadius: "999px",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 600,
+              fontSize: "0.72rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#06B085",
+            }}
+          >
+            <span
+              style={{
+                width: "6px",
+                height: "6px",
+                borderRadius: "50%",
+                background: "#06B085",
+                display: "inline-block",
+              }}
+            />
+            Proud Partners With...
+          </span>
+        </div>
 
         {/* Fade-mask + scrolling track */}
         <div

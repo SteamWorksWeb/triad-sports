@@ -53,6 +53,126 @@ export default function Footer() {
         borderTop: "1px solid rgba(255,255,255,0.06)",
       }}
     >
+      {/* ══════════════ PARTNERS CAROUSEL ══════════════ */}
+      <div
+        style={{
+          padding: "3rem 0 2.5rem",
+          borderBottom: "1px solid rgba(255,255,255,0.07)",
+          overflow: "hidden",
+        }}
+      >
+        {/* Section header */}
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.375rem 1rem",
+              background: "rgba(6,176,133,0.12)",
+              border: "1px solid rgba(6,176,133,0.25)",
+              borderRadius: "999px",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 600,
+              fontSize: "0.72rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#06B085",
+            }}
+          >
+            <span
+              style={{
+                width: "6px",
+                height: "6px",
+                borderRadius: "50%",
+                background: "#06B085",
+                display: "inline-block",
+                boxShadow: "0 0 6px #06B085",
+              }}
+            />
+            Proud Partners With...
+          </span>
+        </div>
+
+        {/* Fade-mask + scrolling track */}
+        <div className="relative w-full overflow-hidden block">
+          {/* Left fade — matches footer bg #061230 */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-0 top-0 bottom-0 z-10"
+            style={{
+              width: "120px",
+              background: "linear-gradient(to right, #061230, transparent)",
+            }}
+          />
+          {/* Right fade — matches footer bg #061230 */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute right-0 top-0 bottom-0 z-10"
+            style={{
+              width: "120px",
+              background: "linear-gradient(to left, #061230, transparent)",
+            }}
+          />
+
+          {/* Scrolling logo track — duplicated for seamless loop */}
+          <div
+            className="marquee-track flex flex-nowrap items-center flex-shrink-0 w-max min-w-max"
+            style={{
+              gap: "2.5rem",
+              paddingLeft: "1.5rem",
+            }}
+          >
+            {[
+              /* Set A */
+              { label: "CityBuild Co.", icon: "🏗️" },
+              { label: "Apex Sports", icon: "⚡" },
+              { label: "FieldTech", icon: "🌿" },
+              { label: "UrbanPlay", icon: "🏙️" },
+              { label: "NexGen Parks", icon: "🌳" },
+              { label: "AthleteFirst", icon: "🏆" },
+              { label: "GridIron Group", icon: "🏈" },
+              { label: "CourtCraft", icon: "🎾" },
+              /* Set B — exact duplicate for seamless loop */
+              { label: "CityBuild Co.", icon: "🏗️" },
+              { label: "Apex Sports", icon: "⚡" },
+              { label: "FieldTech", icon: "🌿" },
+              { label: "UrbanPlay", icon: "🏙️" },
+              { label: "NexGen Parks", icon: "🌳" },
+              { label: "AthleteFirst", icon: "🏆" },
+              { label: "GridIron Group", icon: "🏈" },
+              { label: "CourtCraft", icon: "🎾" },
+            ].map((logo, i) => (
+              <div
+                key={`${logo.label}-${i}`}
+                className="flex-shrink-0 flex items-center select-none"
+                style={{
+                  gap: "0.5rem",
+                  padding: "0.6rem 1.25rem",
+                  borderRadius: "10px",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(255,255,255,0.04)",
+                }}
+              >
+                <span style={{ fontSize: "1.15rem" }}>{logo.icon}</span>
+                <span
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 600,
+                    fontSize: "0.82rem",
+                    letterSpacing: "-0.01em",
+                    color: "#94a3b8",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {logo.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Main footer grid */}
       <div
         style={{

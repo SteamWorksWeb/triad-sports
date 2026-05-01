@@ -1149,34 +1149,119 @@ export default function HomePage() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA row below gallery */}
+        <div
+          style={{
+            marginTop: "4rem",
+            textAlign: "center",
+          }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+            style={{ display: "inline-block" }}
+          >
+            <Link
+              href="/projects"
+              id="gallery-see-more-btn"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                padding: "0.9rem 2.25rem",
+                background: "#007DC3",
+                color: "#ffffff",
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 700,
+                fontSize: "0.9rem",
+                letterSpacing: "0.025em",
+                textDecoration: "none",
+                borderRadius: "8px",
+                textTransform: "uppercase",
+                boxShadow: "0 4px 20px rgba(0,125,195,0.25)",
+                transition: "background 0.2s ease, transform 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "#005f96";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "#007DC3";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+              }}
+            >
+              See More Projects
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
-      {/* ══════════════ PARTNERS CAROUSEL ══════════════ */}
+
+      {/* ══════════════ TERMINAL CTA — GREEN ══════════════ */}
       <section
         style={{
-          background: "#ffffff",
-          padding: "4rem 0",
-          borderTop: "1px solid #f1f5f9",
+          background: "linear-gradient(135deg, #06B085 0%, #049e77 50%, #038a68 100%)",
+          padding: "7rem 1.5rem",
+          textAlign: "center",
+          position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Section header */}
-        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+        {/* Subtle texture — light radial highlight */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "-60px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "800px",
+            height: "400px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 70%)",
+            filter: "blur(40px)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+          style={{
+            position: "relative",
+            zIndex: 1,
+            maxWidth: "720px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "1.5rem",
+          }}
+        >
+          {/* Eyebrow pill — inverted (white bg, green text) */}
           <span
             style={{
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              padding: "0.375rem 1rem",
-              background: "rgba(6,176,133,0.08)",
-              border: "1px solid rgba(6,176,133,0.2)",
+              padding: "0.4rem 1.1rem",
+              background: "rgba(255,255,255,0.20)",
+              border: "1px solid rgba(255,255,255,0.35)",
               borderRadius: "999px",
               fontFamily: "Inter, sans-serif",
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: "0.72rem",
-              letterSpacing: "0.1em",
+              letterSpacing: "0.12em",
               textTransform: "uppercase",
-              color: "#06B085",
+              color: "#ffffff",
             }}
           >
             <span
@@ -1184,112 +1269,115 @@ export default function HomePage() {
                 width: "6px",
                 height: "6px",
                 borderRadius: "50%",
-                background: "#06B085",
+                background: "#ffffff",
                 display: "inline-block",
+                boxShadow: "0 0 6px rgba(255,255,255,0.7)",
               }}
             />
-            Proud Partners With...
+            Make an Impact
           </span>
-        </div>
 
-        {/* Fade-mask + scrolling track */}
-        <div
-          style={{
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          {/* Left fade */}
-          <div
-            aria-hidden="true"
+          {/* Headline */}
+          <h2
             style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              bottom: 0,
-              width: "120px",
-              background: "linear-gradient(to right, #ffffff, transparent)",
-              zIndex: 2,
-              pointerEvents: "none",
-            }}
-          />
-          {/* Right fade */}
-          <div
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              right: 0,
-              top: 0,
-              bottom: 0,
-              width: "120px",
-              background: "linear-gradient(to left, #ffffff, transparent)",
-              zIndex: 2,
-              pointerEvents: "none",
-            }}
-          />
-
-          {/* Scrolling logo track — duplicated for seamless loop */}
-          <div
-            className="marquee-track"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "3.5rem",
-              width: "max-content",
-              paddingLeft: "1.5rem",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(2.25rem, 5.5vw, 4rem)",
+              lineHeight: 1.08,
+              letterSpacing: "-0.04em",
+              color: "#ffffff",
+              margin: 0,
             }}
           >
-            {[
-              /* Set A */
-              { label: "CityBuild Co.", icon: "🏗️" },
-              { label: "Apex Sports", icon: "⚡" },
-              { label: "FieldTech", icon: "🌿" },
-              { label: "UrbanPlay", icon: "🏙️" },
-              { label: "NexGen Parks", icon: "🌳" },
-              { label: "AthleteFirst", icon: "🏆" },
-              { label: "GridIron Group", icon: "🏈" },
-              { label: "CourtCraft", icon: "🎾" },
-              /* Set B — duplicate for seamless loop */
-              { label: "CityBuild Co.", icon: "🏗️" },
-              { label: "Apex Sports", icon: "⚡" },
-              { label: "FieldTech", icon: "🌿" },
-              { label: "UrbanPlay", icon: "🏙️" },
-              { label: "NexGen Parks", icon: "🌳" },
-              { label: "AthleteFirst", icon: "🏆" },
-              { label: "GridIron Group", icon: "🏈" },
-              { label: "CourtCraft", icon: "🎾" },
-            ].map((logo, i) => (
-              <div
-                key={`${logo.label}-${i}`}
+            Leave a Lasting Legacy.
+          </h2>
+
+          {/* Subheadline */}
+          <p
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontSize: "clamp(1rem, 2.2vw, 1.15rem)",
+              lineHeight: 1.75,
+              color: "rgba(255,255,255,0.88)",
+              margin: 0,
+              maxWidth: "560px",
+            }}
+          >
+            Join our network of municipal leaders and private donors in building
+            the facilities our communities deserve.
+          </p>
+
+          {/* Buttons */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+              justifyContent: "center",
+              marginTop: "0.5rem",
+            }}
+          >
+            {/* Primary — solid white, green text */}
+            <motion.div
+              whileHover={{ y: -2, scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 18 }}
+            >
+              <Link
+                href="/get-involved"
+                id="terminal-cta-get-involved-btn"
                 style={{
-                  display: "flex",
+                  display: "inline-flex",
                   alignItems: "center",
                   gap: "0.5rem",
-                  padding: "0.75rem 1.5rem",
-                  borderRadius: "10px",
-                  border: "1px solid #e2e8f0",
-                  background: "#f8fafc",
-                  flexShrink: 0,
-                  userSelect: "none",
+                  padding: "0.9rem 2.25rem",
+                  background: "#ffffff",
+                  color: "#06B085",
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 800,
+                  fontSize: "0.9rem",
+                  letterSpacing: "0.05em",
+                  textDecoration: "none",
+                  borderRadius: "8px",
+                  textTransform: "uppercase",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
                 }}
               >
-                <span style={{ fontSize: "1.25rem" }}>{logo.icon}</span>
-                <span
-                  style={{
-                    fontFamily: "Inter, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "0.85rem",
-                    letterSpacing: "-0.01em",
-                    color: "#475569",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {logo.label}
-                </span>
-              </div>
-            ))}
+                Get Involved
+              </Link>
+            </motion.div>
+
+            {/* Secondary — white outline */}
+            <motion.div
+              whileHover={{ y: -2, scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 18 }}
+            >
+              <Link
+                href="/donate"
+                id="terminal-cta-donate-btn"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  padding: "0.9rem 2.25rem",
+                  background: "transparent",
+                  color: "#ffffff",
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 800,
+                  fontSize: "0.9rem",
+                  letterSpacing: "0.05em",
+                  textDecoration: "none",
+                  borderRadius: "8px",
+                  border: "2px solid rgba(255,255,255,0.75)",
+                  textTransform: "uppercase",
+                }}
+              >
+                Donate
+              </Link>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

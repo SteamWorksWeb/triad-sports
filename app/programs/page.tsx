@@ -93,8 +93,25 @@ export default function ProgramsPage() {
           }}
         />
 
-        <div style={{ position: "relative", zIndex: 1, maxWidth: "760px", margin: "0 auto" }}>
-          <span style={{ ...eyebrowStyle, color: "#6ee7cb", marginBottom: "1.5rem" }}>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: "720px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: "1.25rem" }}>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.35rem 0.9rem",
+              background: "rgba(255,255,255,0.12)",
+              border: "1px solid rgba(255,255,255,0.20)",
+              borderRadius: "999px",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 700,
+              fontSize: "0.72rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#06B085",
+            }}
+          >
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#06B085", display: "inline-block", boxShadow: "0 0 6px #06B085" }} />
             Strategic Initiatives
           </span>
 
@@ -102,37 +119,25 @@ export default function ProgramsPage() {
             style={{
               fontFamily: "Inter, sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(2.75rem, 6vw, 4.5rem)",
+              fontSize: "clamp(2.5rem, 5.5vw, 4rem)",
               lineHeight: 1.06,
               letterSpacing: "-0.04em",
               color: "#f8fafc",
-              margin: "0 0 1.5rem",
+              margin: 0,
             }}
           >
-            Strategic{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #07c99a 0%, #06B085 50%, #038a68 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Initiatives.
-            </span>
+            <span style={{ color: "#ffffff" }}>Strategic </span>
+            <span style={{ color: "#06B085" }}>Initiatives.</span>
           </h1>
 
           <p
             style={{
               fontFamily: "Inter, sans-serif",
-              fontWeight: 400,
-              fontSize: "clamp(1rem, 2.2vw, 1.2rem)",
+              fontSize: "clamp(1rem, 2vw, 1.15rem)",
               lineHeight: 1.75,
-              color: "#94a3b8",
+              color: "#cbd5e1",
               margin: 0,
-              maxWidth: "600px",
-              marginLeft: "auto",
-              marginRight: "auto",
+              maxWidth: "580px",
             }}
           >
             We don&apos;t just write checks. We architect solutions. Explore the core pillars

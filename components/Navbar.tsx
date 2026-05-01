@@ -1,15 +1,15 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Projects", href: "#projects" },
-  { label: "Impact", href: "#impact" },
-  { label: "News", href: "#news" },
+  { label: "About", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Projects", href: "/projects" },
+  { label: "Impact", href: "/impact" },
+  { label: "News", href: "/news" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -117,7 +117,7 @@ export default function Navbar() {
         >
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 style={{
                   fontFamily: "Inter, sans-serif",
@@ -136,15 +136,15 @@ export default function Navbar() {
                 }
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         {/* Desktop CTA */}
         <div className="hidden md:flex" style={{ flexShrink: 0 }}>
-          <a
-            href="#donate"
+          <Link
+            href="/donate"
             id="nav-donate-btn"
             style={{
               display: "inline-flex",
@@ -173,7 +173,7 @@ export default function Navbar() {
             }}
           >
             Donate Now
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -226,7 +226,7 @@ export default function Navbar() {
             }}
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
@@ -239,10 +239,10 @@ export default function Navbar() {
                 }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#donate"
+            <Link
+              href="/donate"
               onClick={() => setMobileOpen(false)}
               style={{
                 display: "inline-flex",
@@ -259,7 +259,7 @@ export default function Navbar() {
               }}
             >
               Donate Now
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

@@ -68,8 +68,8 @@ export default function Footer() {
         <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
           <Link href="/" style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.6rem" }}>
             <svg width="36" height="40" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M16 0L0 6v10c0 10.5 6.8 20.3 16 24C25.2 36.3 32 26.5 32 16V6L16 0z" fill="#bf0a30" />
-              <path d="M16 4L3 9v8c0 8.6 5.6 16.7 13 19.8C23.4 33.7 29 25.6 29 17V9L16 4z" fill="#0a1f44" />
+              <path d="M16 0L0 6v10c0 10.5 6.8 20.3 16 24C25.2 36.3 32 26.5 32 16V6L16 0z" fill="#06B085" />
+              <path d="M16 4L3 9v8c0 8.6 5.6 16.7 13 19.8C23.4 33.7 29 25.6 29 17V9L16 4z" fill="#007DC3" />
               <text x="16" y="22" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Inter, sans-serif" letterSpacing="0.5">TSF</text>
             </svg>
             <div>
@@ -165,7 +165,7 @@ export default function Footer() {
                       width: "4px",
                       height: "4px",
                       borderRadius: "50%",
-                      background: "#bf0a30",
+                      background: "#06B085",
                       display: "inline-block",
                       flexShrink: 0,
                     }}
@@ -193,7 +193,7 @@ export default function Footer() {
             Get in Touch
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.65rem" }}>
-            {["info@triadsportsfoundation.org", "(336) 555-0192", "Greensboro, NC"].map((item) => (
+            {["info@triadsportsfoundation.org", "828-518-5787", "1906 West Front Street"].map((item) => (
               <p
                 key={item}
                 style={{
@@ -217,8 +217,8 @@ export default function Footer() {
               alignItems: "center",
               gap: "0.4rem",
               padding: "0.35rem 0.75rem",
-              background: "rgba(191,10,48,0.1)",
-              border: "1px solid rgba(191,10,48,0.25)",
+              background: "rgba(6,176,133,0.1)",
+              border: "1px solid rgba(6,176,133,0.25)",
               borderRadius: "999px",
             }}
           >
@@ -227,7 +227,7 @@ export default function Footer() {
                 width: "5px",
                 height: "5px",
                 borderRadius: "50%",
-                background: "#bf0a30",
+                background: "#06B085",
                 display: "inline-block",
               }}
             />
@@ -238,7 +238,7 @@ export default function Footer() {
                 fontSize: "0.7rem",
                 letterSpacing: "0.07em",
                 textTransform: "uppercase",
-                color: "#f87171",
+                color: "#6ee7cb",
               }}
             >
               501(c)(3) Nonprofit

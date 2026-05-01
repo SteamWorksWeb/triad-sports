@@ -60,9 +60,9 @@ export default function HomePage() {
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
-          /* Deep patriot-blue → black radial gradient */
+          /* Deep tsf-blue → black radial gradient */
           background:
-            "radial-gradient(ellipse 120% 90% at 50% -10%, #0a1f44 0%, #061230 35%, #030810 70%, #05090f 100%)",
+            "radial-gradient(ellipse 120% 90% at 50% -10%, #003d6b 0%, #00284a 35%, #030810 70%, #05090f 100%)",
         }}
       >
         {/* ── Hero background image layer ── */}
@@ -100,7 +100,7 @@ export default function HomePage() {
             height: "520px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(191,10,48,0.18) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(6,176,133,0.18) 0%, transparent 70%)",
             filter: "blur(40px)",
             pointerEvents: "none",
             zIndex: 1,
@@ -118,7 +118,7 @@ export default function HomePage() {
             height: "600px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(10,55,120,0.22) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(0,125,195,0.22) 0%, transparent 70%)",
             filter: "blur(60px)",
             pointerEvents: "none",
             zIndex: 1,
@@ -161,15 +161,15 @@ export default function HomePage() {
                   alignItems: "center",
                   gap: "0.5rem",
                   padding: "0.375rem 1rem",
-                  background: "rgba(191,10,48,0.12)",
-                  border: "1px solid rgba(191,10,48,0.35)",
+                  background: "rgba(6,176,133,0.12)",
+                  border: "1px solid rgba(6,176,133,0.35)",
                   borderRadius: "999px",
                   fontFamily: "Inter, sans-serif",
                   fontWeight: 600,
                   fontSize: "0.75rem",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#f87171",
+                  color: "#6ee7cb",
                 }}
               >
                 <span
@@ -177,9 +177,9 @@ export default function HomePage() {
                     width: "6px",
                     height: "6px",
                     borderRadius: "50%",
-                    background: "#bf0a30",
+                    background: "#06B085",
                     display: "inline-block",
-                    boxShadow: "0 0 6px #bf0a30",
+                    boxShadow: "0 0 6px #06B085",
                   }}
                 />
                 Nonprofit · 501(c)(3) Certified
@@ -200,19 +200,18 @@ export default function HomePage() {
                 maxWidth: "820px",
               }}
             >
-              Empowering Communities{" "}
+              Building the Future of{" "}
               <span
                 style={{
                   background:
-                    "linear-gradient(135deg, #ef4444 0%, #bf0a30 50%, #991b1b 100%)",
+                    "linear-gradient(135deg, #07c99a 0%, #06B085 50%, #038a68 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
                 }}
               >
-                Through the Power
-              </span>{" "}
-              of Sports.
+                Community Sports.
+              </span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -229,11 +228,9 @@ export default function HomePage() {
                 letterSpacing: "0.005em",
               }}
             >
-              We build the facilities and provide the resources so your community
-              can focus on what matters:{" "}
-              <em style={{ color: "#cbd5e1", fontStyle: "normal", fontWeight: 500 }}>
-                the game.
-              </em>
+              Facilitating elite public-private partnerships. We fund, design, and
+              build the facilities that municipal parks and high-caliber programs
+              need to thrive.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -247,9 +244,9 @@ export default function HomePage() {
                 marginTop: "0.5rem",
               }}
             >
-              {/* Primary — Fund the Future */}
+              {/* Primary — Fund a Project */}
               <motion.a
-                href="#donate"
+                href="/contact"
                 id="hero-fund-btn"
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.97 }}
@@ -260,7 +257,7 @@ export default function HomePage() {
                   gap: "0.5rem",
                   padding: "0.875rem 2rem",
                   background:
-                    "linear-gradient(135deg, #d4113a 0%, #bf0a30 60%, #9b0823 100%)",
+                    "linear-gradient(135deg, #07c99a 0%, #06B085 60%, #038a68 100%)",
                   color: "#ffffff",
                   fontFamily: "Inter, sans-serif",
                   fontWeight: 700,
@@ -270,7 +267,7 @@ export default function HomePage() {
                   borderRadius: "8px",
                   border: "none",
                   cursor: "pointer",
-                  boxShadow: "0 4px 24px rgba(191,10,48,0.40), 0 1px 3px rgba(0,0,0,0.5)",
+                  boxShadow: "0 4px 24px rgba(6,176,133,0.40), 0 1px 3px rgba(0,0,0,0.5)",
                   textTransform: "uppercase",
                 }}
               >
@@ -279,7 +276,7 @@ export default function HomePage() {
                   <line x1="12" y1="1" x2="12" y2="23"/>
                   <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
-                Fund the Future
+                Fund a Project
               </motion.a>
 
               {/* Secondary — Start A Project */}
@@ -317,7 +314,7 @@ export default function HomePage() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
-                Start A Project
+                Partner With Us
               </motion.a>
             </motion.div>
 
@@ -476,15 +473,15 @@ export default function HomePage() {
                 alignItems: "center",
                 gap: "0.5rem",
                 padding: "0.35rem 0.9rem",
-                background: "rgba(10,31,68,0.07)",
-                border: "1px solid rgba(10,31,68,0.15)",
+                background: "rgba(0,125,195,0.07)",
+                border: "1px solid rgba(0,125,195,0.15)",
                 borderRadius: "999px",
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 600,
                 fontSize: "0.72rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#0a1f44",
+                color: "#007DC3",
                 width: "fit-content",
               }}
             >
@@ -493,7 +490,7 @@ export default function HomePage() {
                   width: "6px",
                   height: "6px",
                   borderRadius: "50%",
-                  background: "#0a1f44",
+                  background: "#007DC3",
                   display: "inline-block",
                 }}
               />
@@ -507,7 +504,7 @@ export default function HomePage() {
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 lineHeight: 1.1,
                 letterSpacing: "-0.035em",
-                color: "#0a1f44",
+                color: "#007DC3",
                 margin: 0,
               }}
             >
@@ -574,7 +571,7 @@ export default function HomePage() {
                     alignItems: "center",
                     gap: "0.5rem",
                     padding: "0.875rem 2rem",
-                    background: "#0a1f44",
+                    background: "#007DC3",
                     color: "#ffffff",
                     fontFamily: "Inter, sans-serif",
                     fontWeight: 700,
@@ -583,7 +580,7 @@ export default function HomePage() {
                     textDecoration: "none",
                     borderRadius: "8px",
                     textTransform: "uppercase",
-                    boxShadow: "0 4px 20px rgba(10,31,68,0.25)",
+                    boxShadow: "0 4px 20px rgba(0,125,195,0.25)",
                   }}
                 >
                   Learn More
@@ -613,7 +610,7 @@ export default function HomePage() {
                 height: "auto",
                 aspectRatio: "1 / 1",
                 borderRadius: "16px",
-                boxShadow: "0 25px 60px rgba(10,31,68,0.18), 0 8px 24px rgba(0,0,0,0.12)",
+                boxShadow: "0 25px 60px rgba(0,125,195,0.18), 0 8px 24px rgba(0,0,0,0.12)",
                 display: "block",
               }}
             />
@@ -624,7 +621,7 @@ export default function HomePage() {
       {/* ══════════════ CTA SECTION ══════════════ */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0a1f44 0%, #061230 60%, #0a1f44 100%)",
+          background: "linear-gradient(135deg, #003d6b 0%, #00284a 60%, #003d6b 100%)",
           padding: "6rem 1.5rem",
           textAlign: "center",
           position: "relative",
@@ -642,7 +639,7 @@ export default function HomePage() {
             width: "700px",
             height: "400px",
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(191,10,48,0.14) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(6,176,133,0.14) 0%, transparent 70%)",
             filter: "blur(40px)",
             pointerEvents: "none",
           }}
@@ -670,18 +667,18 @@ export default function HomePage() {
               alignItems: "center",
               gap: "0.5rem",
               padding: "0.35rem 0.9rem",
-              background: "rgba(191,10,48,0.12)",
-              border: "1px solid rgba(191,10,48,0.3)",
+              background: "rgba(6,176,133,0.12)",
+              border: "1px solid rgba(6,176,133,0.3)",
               borderRadius: "999px",
               fontFamily: "Inter, sans-serif",
               fontWeight: 600,
               fontSize: "0.72rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "#f87171",
+              color: "#6ee7cb",
             }}
           >
-            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#bf0a30", display: "inline-block", boxShadow: "0 0 6px #bf0a30" }} />
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#06B085", display: "inline-block", boxShadow: "0 0 6px #06B085" }} />
             Join the Movement
           </span>
 
@@ -737,7 +734,7 @@ export default function HomePage() {
                   gap: "0.5rem",
                   padding: "0.9rem 2.25rem",
                   background: "#f8fafc",
-                  color: "#0a1f44",
+                  color: "#007DC3",
                   fontFamily: "Inter, sans-serif",
                   fontWeight: 700,
                   fontSize: "0.9rem",
@@ -814,18 +811,18 @@ export default function HomePage() {
               alignItems: "center",
               gap: "0.5rem",
               padding: "0.35rem 0.9rem",
-              background: "rgba(10,31,68,0.07)",
-              border: "1px solid rgba(10,31,68,0.15)",
+              background: "rgba(0,125,195,0.07)",
+              border: "1px solid rgba(0,125,195,0.15)",
               borderRadius: "999px",
               fontFamily: "Inter, sans-serif",
               fontWeight: 600,
               fontSize: "0.72rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "#0a1f44",
+              color: "#007DC3",
             }}
           >
-            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#0a1f44", display: "inline-block" }} />
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#007DC3", display: "inline-block" }} />
             Our Work
           </span>
 
@@ -836,7 +833,7 @@ export default function HomePage() {
               fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
               letterSpacing: "-0.035em",
               lineHeight: 1.1,
-              color: "#0a1f44",
+              color: "#007DC3",
               margin: 0,
             }}
           >

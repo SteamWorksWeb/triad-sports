@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -65,11 +65,11 @@ export default function Navbar() {
             >
               <path
                 d="M16 0L0 6v10c0 10.5 6.8 20.3 16 24C25.2 36.3 32 26.5 32 16V6L16 0z"
-                fill="#bf0a30"
+                fill="#06B085"
               />
               <path
                 d="M16 4L3 9v8c0 8.6 5.6 16.7 13 19.8C23.4 33.7 29 25.6 29 17V9L16 4z"
-                fill="#0a1f44"
+                fill="#007DC3"
               />
               <text
                 x="16"
@@ -151,7 +151,7 @@ export default function Navbar() {
               alignItems: "center",
               gap: "0.4rem",
               padding: "0.5rem 1.25rem",
-              background: "#bf0a30",
+              background: "#06B085",
               color: "#ffffff",
               fontFamily: "Inter, sans-serif",
               fontWeight: 700,
@@ -164,11 +164,11 @@ export default function Navbar() {
               transition: "background 0.2s ease, transform 0.15s ease",
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "#d4113a";
+              (e.currentTarget as HTMLElement).style.background = "#049e77";
               (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "#bf0a30";
+              (e.currentTarget as HTMLElement).style.background = "#06B085";
               (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
             }}
           >
@@ -248,7 +248,7 @@ export default function Navbar() {
                 display: "inline-flex",
                 justifyContent: "center",
                 padding: "0.75rem 1.5rem",
-                background: "#bf0a30",
+                background: "#06B085",
                 color: "#ffffff",
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 700,

@@ -2,9 +2,10 @@
 
 :root {
   --bg-deep: #05090f;
-  --patriot-blue: #0a1f44;
-  --patriot-red: #bf0a30;
-  --patriot-red-hover: #d4113a;
+  --tsf-blue: #007DC3;
+  --tsf-blue-dark: #005f96;
+  --tsf-green: #06B085;
+  --tsf-green-dark: #049e77;
   --text-primary: #f8fafc;
   --text-muted: #94a3b8;
   --border-subtle: rgba(255, 255, 255, 0.12);

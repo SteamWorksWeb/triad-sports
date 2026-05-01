@@ -32,7 +32,7 @@ const contactDetails = [
       </svg>
     ),
     label: "Phone",
-    value: "(336) 555-0192",
+    value: "828-518-5787",
   },
   {
     icon: (
@@ -42,7 +42,7 @@ const contactDetails = [
       </svg>
     ),
     label: "Location",
-    value: "Greensboro, NC — Serving all 34 states",
+    value: "1906 West Front Street",
   },
   {
     icon: (
@@ -98,7 +98,7 @@ function Field({
         }}
       >
         {label}
-        {required && <span style={{ color: "#bf0a30", marginLeft: "3px" }}>*</span>}
+        {required && <span style={{ color: "#06B085", marginLeft: "3px" }}>*</span>}
       </label>
       <input
         id={id}
@@ -108,8 +108,8 @@ function Field({
         required={required}
         style={inputBase}
         onFocus={(e) => {
-          e.currentTarget.style.borderColor = "#0a1f44";
-          e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10,31,68,0.12)";
+          e.currentTarget.style.borderColor = "#007DC3";
+          e.currentTarget.style.boxShadow = "0 0 0 3px rgba(0,125,195,0.12)";
           e.currentTarget.style.background = "#ffffff";
         }}
         onBlur={(e) => {
@@ -157,15 +157,15 @@ export default function ContactPage() {
                 alignItems: "center",
                 gap: "0.5rem",
                 padding: "0.35rem 0.9rem",
-                background: "rgba(10,31,68,0.07)",
-                border: "1px solid rgba(10,31,68,0.15)",
+                background: "rgba(0,125,195,0.07)",
+                border: "1px solid rgba(0,125,195,0.15)",
                 borderRadius: "999px",
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 600,
                 fontSize: "0.72rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#0a1f44",
+                color: "#007DC3",
               }}
             >
               <span
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   width: "6px",
                   height: "6px",
                   borderRadius: "50%",
-                  background: "#0a1f44",
+                  background: "#007DC3",
                   display: "inline-block",
                 }}
               />
@@ -206,7 +206,7 @@ export default function ContactPage() {
                     fontSize: "clamp(2.4rem, 5vw, 3.75rem)",
                     lineHeight: 1.06,
                     letterSpacing: "-0.04em",
-                    color: "#0a1f44",
+                    color: "#007DC3",
                     margin: 0,
                   }}
                 >
@@ -214,7 +214,7 @@ export default function ContactPage() {
                   <span
                     style={{
                       background:
-                        "linear-gradient(135deg, #bf0a30 0%, #d4113a 100%)",
+                        "linear-gradient(135deg, #007DC3 0%, #005f96 100%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
@@ -274,11 +274,11 @@ export default function ContactPage() {
                         width: "40px",
                         height: "40px",
                         borderRadius: "10px",
-                        background: "rgba(10,31,68,0.06)",
+                        background: "rgba(0,125,195,0.06)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        color: "#0a1f44",
+                        color: "#007DC3",
                       }}
                     >
                       {item.icon}
@@ -327,7 +327,7 @@ export default function ContactPage() {
                   borderRadius: "20px",
                   padding: "clamp(1.75rem, 4vw, 2.5rem)",
                   boxShadow:
-                    "0 4px 6px rgba(0,0,0,0.04), 0 20px 60px rgba(10,31,68,0.08), 0 1px 0 rgba(255,255,255,0.9) inset",
+                    "0 4px 6px rgba(0,0,0,0.04), 0 20px 60px rgba(0,125,195,0.08), 0 1px 0 rgba(255,255,255,0.9) inset",
                   border: "1px solid rgba(226,232,240,0.8)",
                 }}
               >
@@ -411,7 +411,7 @@ export default function ContactPage() {
                         color: "#475569",
                       }}
                     >
-                      Subject <span style={{ color: "#bf0a30" }}>*</span>
+                      Subject <span style={{ color: "#06B085" }}>*</span>
                     </label>
                     <select
                       id="subject"
@@ -428,8 +428,8 @@ export default function ContactPage() {
                         cursor: "pointer",
                       }}
                       onFocus={(e) => {
-                        e.currentTarget.style.borderColor = "#0a1f44";
-                        e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10,31,68,0.12)";
+                        e.currentTarget.style.borderColor = "#007DC3";
+                        e.currentTarget.style.boxShadow = "0 0 0 3px rgba(0,125,195,0.12)";
                         e.currentTarget.style.background = "#ffffff";
                       }}
                       onBlur={(e) => {
@@ -461,7 +461,7 @@ export default function ContactPage() {
                         color: "#475569",
                       }}
                     >
-                      Message <span style={{ color: "#bf0a30" }}>*</span>
+                      Message <span style={{ color: "#06B085" }}>*</span>
                     </label>
                     <textarea
                       id="message"
@@ -475,8 +475,8 @@ export default function ContactPage() {
                         minHeight: "120px",
                       }}
                       onFocus={(e) => {
-                        e.currentTarget.style.borderColor = "#0a1f44";
-                        e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10,31,68,0.12)";
+                        e.currentTarget.style.borderColor = "#007DC3";
+                        e.currentTarget.style.boxShadow = "0 0 0 3px rgba(0,125,195,0.12)";
                         e.currentTarget.style.background = "#ffffff";
                       }}
                       onBlur={(e) => {
@@ -498,7 +498,7 @@ export default function ContactPage() {
                       width: "100%",
                       padding: "0.9rem 1.5rem",
                       background:
-                        "linear-gradient(135deg, #d4113a 0%, #bf0a30 60%, #9b0823 100%)",
+                        "linear-gradient(135deg, #049e77 0%, #06B085 60%, #038a68 100%)",
                       color: "#ffffff",
                       fontFamily: "Inter, sans-serif",
                       fontWeight: 700,
@@ -510,7 +510,7 @@ export default function ContactPage() {
                       cursor: "pointer",
                       marginTop: "0.5rem",
                       boxShadow:
-                        "0 4px 20px rgba(191,10,48,0.35), 0 1px 3px rgba(0,0,0,0.4)",
+                        "0 4px 20px rgba(6,176,133,0.35), 0 1px 3px rgba(0,0,0,0.4)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
